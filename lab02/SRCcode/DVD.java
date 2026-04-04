@@ -1,7 +1,7 @@
 package SRCcode;
 
 public class DVD {
-    // Attributes
+
     private String title;
     private String categories;
     private String director;
@@ -11,7 +11,6 @@ public class DVD {
 
     public DVD() {}
 
-    // Getters
     public String getTitle() {
         return title;
     }
