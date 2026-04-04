@@ -9,13 +9,40 @@ public class DVD {
     private int length;
     private String warranty;
 
-
     public DVD() {}
 
-
-    public void getTitle() {
+    // Getters
+    public String getTitle() {
+        return title;
     }
 
-    public void DVDdesc() {
+    public String getCategories() {
+        return categories;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public String getWarranty() {
+        return warranty;
+    }
+
+    // Optional: mô tả DVD
+    public String DVDdesc() {
+        return "Title: " + title +
+               ", Categories: " + categories +
+               ", Director: " + director +
+               ", Cost: " + cost +
+               ", Length: " + length +
+               ", Warranty: " + warranty;
     }
 }
