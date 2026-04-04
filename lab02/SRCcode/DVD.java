@@ -35,7 +35,6 @@ public class DVD {
         return warranty;
     }
 
-    // Optional: mô tả DVD
     public String DVDdesc() {
         return "Title: " + title +
                ", Categories: " + categories +
