@@ -9,9 +9,34 @@ public class DVD {
     private int length;
     private String warranty;
 
-    public DVD() {}
+    public DVD(String title, String categories, String director,
+               float cost, int length, String warranty) {
+        this.title = title;
+        this.categories = categories;
+        this.director = director;
+        this.cost = cost;
+        this.length = length;
+        this.warranty = warranty;
+    }
 
-    public String getTitle() {
+    public void getTitle() {
+        System.out.println("Title: " + title);
+    }
+
+    public void DVDdesc() {
+        System.out.println("Title: " + title);
+        System.out.println("Categories: " + categories);
+        System.out.println("Director: " + director);
+        System.out.println("Cost: " + cost);
+        System.out.println("Length: " + length);
+        System.out.println("Warranty: " + warranty);
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    public String getTitleValue() {
         return title;
     }
 
@@ -23,24 +48,11 @@ public class DVD {
         return director;
     }
 
-    public float getCost() {
-        return cost;
-    }
-
     public int getLength() {
         return length;
     }
 
     public String getWarranty() {
         return warranty;
-    }
-
-    public String DVDdesc() {
-        return "Title: " + title +
-               ", Categories: " + categories +
-               ", Director: " + director +
-               ", Cost: " + cost +
-               ", Length: " + length +
-               ", Warranty: " + warranty;
     }
 }
