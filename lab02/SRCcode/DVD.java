@@ -1,13 +1,11 @@
-package SRCcode;
-
 public class DVD {
 
-    private String title;
-    private String categories;
-    private String director;
-    private float cost;
-    private int length;
-    private String warranty;
+    private final String title;
+    private final String categories;
+    private final String director;
+    private final float cost;
+    private final int length;
+    private final String warranty;
 
     public DVD(String title, String categories, String director,
                float cost, int length, String warranty) {

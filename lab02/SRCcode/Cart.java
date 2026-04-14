@@ -1,5 +1,3 @@
-package SRCcode;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +5,7 @@ public class Cart {
 
     private float calculateCost;
     private int quantityOrder;
-    private List<DVD> dvdList;
+    private final List<DVD> dvdList;
 
     public Cart() {
         this.dvdList = new ArrayList<>();
@@ -28,6 +26,7 @@ public class Cart {
     }
 
     public float getCalculateCost() {
+        
         return calculateCost;
     }
 
