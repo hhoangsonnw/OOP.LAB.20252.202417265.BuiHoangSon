@@ -9,66 +9,28 @@ public class DigitalVideoDisc extends Disc implements Playable {
     }
 
     private static int nbDigitalVideoDiscs = 0;
-    private String director;
-    private int length;
     private String warranty;
 
     public DigitalVideoDisc(String title) {
-        this.setId(++nbDigitalVideoDiscs);
-        this.setTitle(title);
-        this.setCategory("Unknown");
-        this.director = "Unknown";
-        this.setCost(0.0f);
-        this.length = 0;
+        super(++nbDigitalVideoDiscs, title, "Unknown", 0.0f, 0, "Unknown");
         this.warranty = "No warranty";
     }
 
     public DigitalVideoDisc(String title, String category, String director,
                            float cost, int length, String warranty) {
-        this.setId(++nbDigitalVideoDiscs);
-        this.setTitle(title);
-        this.setCategory(category);
-        this.director = director;
-        this.setCost(cost);
-        this.length = length;
+        super(++nbDigitalVideoDiscs, title, category, cost, length, director);
         this.warranty = warranty;
     }
 
     public DigitalVideoDisc(String title, String category, String director,
                            int length, float cost) {
-        this.setId(++nbDigitalVideoDiscs);
-        this.setTitle(title);
-        this.setCategory(category);
-        this.director = director;
-        this.setCost(cost);
-        this.length = length;
+        super(++nbDigitalVideoDiscs, title, category, cost, length, director);
         this.warranty = "No warranty";
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
-        this.setId(++nbDigitalVideoDiscs);
-        this.setTitle(title);
-        this.setCategory(category);
-        this.director = "Unknown";
-        this.setCost(cost);
-        this.length = 0;
+        super(++nbDigitalVideoDiscs, title, category, cost, 0, "Unknown");
         this.warranty = "No warranty";
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
     }
 
     public String getWarranty() {
@@ -80,14 +42,14 @@ public class DigitalVideoDisc extends Disc implements Playable {
     }
 
     public void displayInfo() {
-        System.out.println("Title: " + this.getTitle() + " | Director: " + director + 
+        System.out.println("Title: " + this.getTitle() + " | Director: " + this.getDirector() + 
                          " | Category: " + this.getCategory() + " | Price: $" + this.getCost());
     }
 
     @Override
     public String toString() {
-        return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + director + 
-               " - " + length + ": " + this.getCost() + " $";
+        return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + 
+               " - " + this.getLength() + ": " + this.getCost() + " $";
     }
 
     public boolean isMatch(String searchTitle) {
